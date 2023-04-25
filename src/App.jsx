@@ -1,7 +1,6 @@
 import React from 'react'
 import Title from "./components/Title"
 import LabelForm from './components/LabelForm'
-import FormButton from './components/FormButton'
 import Table from './components/Table'
 import Tbody from "./components/Tbody"
 import { useState } from 'react'
@@ -40,7 +39,7 @@ const App = () => {
           labelfor="fname"
           labelText="First name"
         />
-      
+
         <input
           type="text"
           placeholder="your first name"
@@ -74,6 +73,7 @@ const App = () => {
         <input
           type="email"
           placeholder="your email"
+          className="form-control mt-1"
           onChange={(e) => setEmail(e.target.value)}
         />
       </div>
@@ -89,6 +89,7 @@ const App = () => {
         <input
           type="number"
           placeholder="+21236767687"
+          className="form-control mt-1"
           onChange={(e) => setPhone(e.target.value)}
         />
       </div>
@@ -96,7 +97,9 @@ const App = () => {
 
       {/* Submit Button */}
 
-      <FormButton />
+      <div className="form-group mt-2 p-2 col-md-6 mx-auto">
+        <button className="btn btn-dark w-100 mt-2" onClick={() => AddEmploye()}>Add Employe</button>
+      </div>
 
 
       {/* Table */}
