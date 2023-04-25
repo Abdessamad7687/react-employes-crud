@@ -1,8 +1,6 @@
 import React from 'react'
 import Title from "./components/Title"
 import LabelForm from './components/LabelForm'
-import Table from './components/Table'
-import Tbody from "./components/Tbody"
 import { useState } from 'react'
 
 const App = () => {
@@ -104,11 +102,37 @@ const App = () => {
 
       {/* Table */}
 
-      <Table>
-        <Tbody>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
 
-        </Tbody>
-      </Table>
+            Employes.map((Employe, index) => (
+              <tr key={index}>
+                <th scope="row"></th>
+                <td>${Employe.fname}</td>
+                <td>${Employe.lname}</td>
+                <td>${Employe.email}</td>
+                <td>${Employe.phone}</td>
+                <td>
+                  <button class="btn btn-warning" >Edit</button>
+                  <button class="btn btn-danger">Remove</button>
+                </td>
+              </tr>
+            ))
+          }
+        </tbody>
+
+      </table>
 
     </div>
   )
