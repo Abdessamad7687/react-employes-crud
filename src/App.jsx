@@ -7,6 +7,9 @@ import FormButton from './components/FormButton'
 const App = () => {
   return (
     <div className="container my-4">
+
+      {/* Title */}
+
       <Title />
 
       {/* First Name */}
@@ -61,6 +64,9 @@ const App = () => {
           placeholder="+21236767687"
         />
       </div>
+
+
+      {/* Submit Button */}
 
       <FormButton />
 
