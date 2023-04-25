@@ -14,7 +14,7 @@ const App = () => {
 
       {/* First Name */}
 
-      <div className="form-group mt-2 p-2">
+      <div className="form-group mt-2 p-2 col-md-6 mx-auto">
         <LabelForm
           labelfor="fname"
           labelText="First name"
@@ -27,7 +27,7 @@ const App = () => {
 
       {/* Last Name */}
 
-      <div className="form-group mt-2 p-2">
+      <div className="form-group mt-2 p-2 col-md-6 mx-auto">
         <LabelForm
           labelfor="lname"
           labelText="Last name"
@@ -40,7 +40,7 @@ const App = () => {
 
       {/* Email */}
 
-      <div className="form-group mt-2 p-2">
+      <div className="form-group mt-2 p-2 col-md-6 mx-auto">
         <LabelForm
           labelfor="email"
           labelText="email"
@@ -54,7 +54,7 @@ const App = () => {
 
       {/* Phone number */}
 
-      <div className="form-group mt-2 p-2">
+      <div className="form-group mt-2 p-2 col-md-6 mx-auto">
         <LabelForm
           labelfor="Phone"
           labelText="Phone"
