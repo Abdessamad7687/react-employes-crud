@@ -19,11 +19,11 @@ const App = () => {
       phone: phone
     }
     setEmployes([...Employes, newEmploye])
-    console.log(Employes  )
+    console.log(Employes)
   }
 
   const deleteEmploye = (phone) => {
-    const newList = Employes.filter(Employe => Employe.phone !== phone)
+    const newList = Employes.filter((Employe) => Employe.phone !== phone)
     console.log(newList)
   }
 
