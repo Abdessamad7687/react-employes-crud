@@ -3,6 +3,8 @@ import Title from "./components/Title"
 import LabelForm from './components/LabelForm'
 import InputForm from "./components/InputForm"
 import FormButton from './components/FormButton'
+import Table from './components/Table'
+import Tbody from "./components/Tbody"
 
 const App = () => {
   return (
@@ -69,6 +71,15 @@ const App = () => {
       {/* Submit Button */}
 
       <FormButton />
+
+
+      {/* Table */}
+
+      <Table>
+        <Tbody>
+
+        </Tbody>
+      </Table>
 
     </div>
   )
