@@ -1,18 +1,29 @@
 import React from 'react'
 import Title from "./components/Title"
 import LabelForm from './components/LabelForm'
-import InputForm from "./components/InputForm"
 import FormButton from './components/FormButton'
 import Table from './components/Table'
 import Tbody from "./components/Tbody"
 import { useState } from 'react'
 
 const App = () => {
-
+  const [Employes, setEmployes] = useState([])
   const [fname, setFname] = useState('')
   const [lname, setLname] = useState('')
-  // const [email, setEmail] = useState('')
-  // const [phone, setPhone] = useState('')
+  const [email, setEmail] = useState('')
+  const [phone, setPhone] = useState('')
+
+
+  const AddEmploye = () => {
+    const newEmploye = {
+      fname: fname,
+      lname: lname,
+      email: email,
+      phone: phone
+    }
+    setEmployes([...Employes, newEmploye])
+    console.log(Employes)
+  }
 
   return (
     <div className="container my-4">
@@ -45,7 +56,7 @@ const App = () => {
           labelfor="lname"
           labelText="Last name"
         />
-        <InputForm
+        <input
           type="text"
           className="form-control mt-1"
           placeholder="your last name"
@@ -60,9 +71,10 @@ const App = () => {
           labelfor="email"
           labelText="email"
         />
-        <InputForm
+        <input
           type="email"
           placeholder="your email"
+          onChange={(e) => setEmail(e.target.value)}
         />
       </div>
 
@@ -74,9 +86,10 @@ const App = () => {
           labelfor="Phone"
           labelText="Phone"
         />
-        <InputForm
+        <input
           type="number"
           placeholder="+21236767687"
+          onChange={(e) => setPhone(e.target.value)}
         />
       </div>
 
@@ -84,7 +97,6 @@ const App = () => {
       {/* Submit Button */}
 
       <FormButton />
-
 
 
       {/* Table */}
