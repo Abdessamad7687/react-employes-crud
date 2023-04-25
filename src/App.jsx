@@ -13,7 +13,6 @@ const App = () => {
 
   const AddEmploye = () => {
     const newEmploye = {
-      id: Math.random(Math.floor(1, 10)),
       fname: fname,
       lname: lname,
       email: email,
@@ -23,9 +22,9 @@ const App = () => {
     console.log(Employes  )
   }
 
-  const deleteEmploye = (id) => {
-    const newList = Employes.filter(Employe => Employe.id !== id)
-    setEmployes(newList)
+  const deleteEmploye = (phone) => {
+    const newList = Employes.filter(Employe => Employe.phone !== phone)
+    console.log(newList)
   }
 
   return (
@@ -121,15 +120,16 @@ const App = () => {
         <tbody>
           {
 
-            Employes.map((Employe) => (
-              <tr key={Employe.id}>
+            Employes.map((Employe, index) => (
+              <tr key={index}>
                 <td>{Employe.fname}</td>
                 <td>{Employe.lname}</td>
                 <td>{Employe.email}</td>
                 <td>{Employe.phone}</td>
                 <td>
-                  <button className="btn btn-warning" onClick={() => deleteEmploye(Employe.id)}>Edit</button>
-                  <button className="btn btn-danger">Remove</button>
+                  <button className="btn btn-warning">Edit</button>
+                  
+                  <button className="btn btn-danger"  onClick={() => deleteEmploye(Employe.phone)}>Remove</button>
                 </td> 
               </tr>
             ))
