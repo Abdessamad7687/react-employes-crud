@@ -102,10 +102,9 @@ const App = () => {
 
       {/* Table */}
 
-      <table>
+      <table className='table mt-4 w-75 mx-auto'>
         <thead>
           <tr>
-            <th scope="col">#</th>
             <th scope="col">First Name</th>
             <th scope="col">Last Name</th>
             <th scope="col">Email</th>
@@ -118,11 +117,10 @@ const App = () => {
 
             Employes.map((Employe, index) => (
               <tr key={index}>
-                <th scope="row"></th>
-                <td>${Employe.fname}</td>
-                <td>${Employe.lname}</td>
-                <td>${Employe.email}</td>
-                <td>${Employe.phone}</td>
+                <td>{Employe.fname}</td>
+                <td>{Employe.lname}</td>
+                <td>{Employe.email}</td>
+                <td>{Employe.phone}</td>
                 <td>
                   <button class="btn btn-warning" >Edit</button>
                   <button class="btn btn-danger">Remove</button>
