@@ -4,7 +4,7 @@ import Thead from './Thead'
 const Table = () => {
     return (
         <table class="table mt-5 w-75 mx-auto">
-            <Thead />
+            <Thead />   
         </table>
     )
 }
