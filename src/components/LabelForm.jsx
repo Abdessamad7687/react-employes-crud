@@ -2,7 +2,7 @@ import React from 'react'
 
 const LabelForm = ({labelfor, labelText}) => {
   return (
-    <label for={labelfor}>{labelText}</label>
+    <label htmlFor={labelfor}>{labelText}</label>
   )
 }
 

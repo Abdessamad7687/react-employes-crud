@@ -5,8 +5,14 @@ import InputForm from "./components/InputForm"
 import FormButton from './components/FormButton'
 import Table from './components/Table'
 import Tbody from "./components/Tbody"
+import { useState } from 'react'
 
 const App = () => {
+
+  const [fname, setFname] = useState('')
+  const [lname, setLname] = useState('')
+  const [email, setEmail] = useState('')
+  const [phone, setPhone] = useState('')
   return (
     <div className="container my-4">
 
@@ -24,6 +30,7 @@ const App = () => {
         <InputForm
           type="text"
           placeholder="your first name"
+          onChange={(e) => setFname(e.target.value)}
         />
       </div>
 
