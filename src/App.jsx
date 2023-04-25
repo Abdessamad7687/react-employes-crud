@@ -13,13 +13,19 @@ const App = () => {
 
   const AddEmploye = () => {
     const newEmploye = {
+      id: Math.random(Math.floor(1, 10)),
       fname: fname,
       lname: lname,
       email: email,
       phone: phone
     }
     setEmployes([...Employes, newEmploye])
-    console.log(Employes)
+    console.log(Employes  )
+  }
+
+  const deleteEmploye = (id) => {
+    const newList = Employes.filter(Employe => Employe.id !== id)
+    setEmployes(newList)
   }
 
   return (
@@ -115,16 +121,16 @@ const App = () => {
         <tbody>
           {
 
-            Employes.map((Employe, index) => (
-              <tr key={index}>
+            Employes.map((Employe) => (
+              <tr key={Employe.id}>
                 <td>{Employe.fname}</td>
                 <td>{Employe.lname}</td>
                 <td>{Employe.email}</td>
                 <td>{Employe.phone}</td>
                 <td>
-                  <button class="btn btn-warning" >Edit</button>
-                  <button class="btn btn-danger">Remove</button>
-                </td>
+                  <button className="btn btn-warning" onClick={() => deleteEmploye(Employe.id)}>Edit</button>
+                  <button className="btn btn-danger">Remove</button>
+                </td> 
               </tr>
             ))
           }
