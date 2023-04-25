@@ -11,8 +11,9 @@ const App = () => {
 
   const [fname, setFname] = useState('')
   const [lname, setLname] = useState('')
-  const [email, setEmail] = useState('')
-  const [phone, setPhone] = useState('')
+  // const [email, setEmail] = useState('')
+  // const [phone, setPhone] = useState('')
+
   return (
     <div className="container my-4">
 
@@ -22,14 +23,17 @@ const App = () => {
 
       {/* First Name */}
 
+
       <div className="form-group mt-2 p-2 col-md-6 mx-auto">
         <LabelForm
           labelfor="fname"
           labelText="First name"
         />
-        <InputForm
+      
+        <input
           type="text"
           placeholder="your first name"
+          className="form-control mt-1"
           onChange={(e) => setFname(e.target.value)}
         />
       </div>
@@ -43,7 +47,9 @@ const App = () => {
         />
         <InputForm
           type="text"
+          className="form-control mt-1"
           placeholder="your last name"
+          onChange={(e) => setLname(e.target.value)}
         />
       </div>
 
@@ -78,6 +84,7 @@ const App = () => {
       {/* Submit Button */}
 
       <FormButton />
+
 
 
       {/* Table */}
