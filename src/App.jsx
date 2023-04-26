@@ -13,6 +13,7 @@ const App = () => {
 
   const AddEmploye = () => {
     const newEmploye = {
+      id: Math.random(1, 10),
       fname: fname,
       lname: lname,
       email: email,
@@ -22,8 +23,9 @@ const App = () => {
     console.log(Employes)
   }
 
-  const deleteEmploye = (phone) => {
-    const newList = Employes.filter((Employe) => Employe.phone !== phone)
+  const deleteEmploye = (id) => {
+    const newList = Employes.filter((Employe) => Employe.id !== id)
+    setEmployes(newList)
     console.log(newList)
   }
 
@@ -129,7 +131,7 @@ const App = () => {
                 <td>
                   <button className="btn btn-warning">Edit</button>
                   
-                  <button className="btn btn-danger"  onClick={() => deleteEmploye(Employe.phone)}>Remove</button>
+                  <button className="btn btn-danger"  onClick={() => deleteEmploye(Employe.id)}>Remove</button>
                 </td> 
               </tr>
             ))
