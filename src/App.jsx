@@ -2,6 +2,7 @@ import React from 'react'
 import Title from "./components/Title"
 import LabelForm from './components/LabelForm'
 import { useState } from 'react'
+// import { Routes, Route } from "react-router-dom";
 
 const App = () => {
   const [Employes, setEmployes] = useState([])
@@ -20,7 +21,7 @@ const App = () => {
       phone: phone
     }
     setEmployes([...Employes, newEmploye])
-    console.log(Employes)
+    clearText()
   }
 
   const deleteEmploye = (id) => {
@@ -29,6 +30,18 @@ const App = () => {
     console.log(newList)
   }
 
+  const clearText = () => {
+    setFname('')
+    setLname('')
+    setEmail('')
+    setPhone('')
+  } 
+
+  // <Routes>
+  //   <Route>
+
+  //   </Route>
+  // </Routes>
   return (
     <div className="container my-4">
 
@@ -49,6 +62,7 @@ const App = () => {
           type="text"
           placeholder="your first name"
           className="form-control mt-1"
+          value={fname}
           onChange={(e) => setFname(e.target.value)}
         />
       </div>
@@ -62,6 +76,7 @@ const App = () => {
         />
         <input
           type="text"
+          value={lname}
           className="form-control mt-1"
           placeholder="your last name"
           onChange={(e) => setLname(e.target.value)}
@@ -72,11 +87,13 @@ const App = () => {
 
       <div className="form-group mt-2 p-2 col-md-6 mx-auto">
         <LabelForm
+        
           labelfor="email"
           labelText="email"
         />
         <input
           type="email"
+          value={email}
           placeholder="your email"
           className="form-control mt-1"
           onChange={(e) => setEmail(e.target.value)}
@@ -93,6 +110,7 @@ const App = () => {
         />
         <input
           type="number"
+          value={phone}
           placeholder="+21236767687"
           className="form-control mt-1"
           onChange={(e) => setPhone(e.target.value)}
