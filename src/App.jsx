@@ -1,9 +1,8 @@
-import React from 'react'
 import Title from "./components/Title"
 import LabelForm from './components/LabelForm'
 import { useState } from 'react'
-// import { Routes, Route } from "react-router-dom";
 import {BsTrash3Fill, BsPenFill} from "react-icons/bs"
+
 
 const App = () => {
   const [Employes, setEmployes] = useState([])
@@ -31,6 +30,10 @@ const App = () => {
     console.log(newList)
   }
 
+  const editEmploye = (id) => {
+     
+  }
+
   const clearText = () => {
     setFname('')
     setLname('')
@@ -38,11 +41,6 @@ const App = () => {
     setPhone('')
   } 
 
-  // <Routes>
-  //   <Route>
-
-  //   </Route>
-  // </Routes>
   return (
     <div className="container my-4">
 
@@ -148,9 +146,10 @@ const App = () => {
                 <td>{Employe.email}</td>
                 <td>{Employe.phone}</td>
                 <td>
-                  <button className="btn btn-warning"><BsPenFill /></button>
+                  {/* <button className="btn btn-warning" onClick={() => editEmploye(Employe
+                    .id)}><BsPenFill /></button> */}
                   
-                  <button className="btn btn-danger m-1"  onClick={() => deleteEmploye(Employe.id)}><BsTrash3Fill /></button>
+                  <button className="btn btn-danger m-1 "  onClick={() => deleteEmploye(Employe.id)}><BsTrash3Fill /></button>
                 </td> 
               </tr>
             ))
