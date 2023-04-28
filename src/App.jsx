@@ -1,7 +1,7 @@
 import Title from "./components/Title"
 import LabelForm from './components/LabelForm'
 import { useState } from 'react'
-import {BsTrash3Fill, BsPenFill} from "react-icons/bs"
+import {BsTrash3Fill } from "react-icons/bs"
 
 
 const App = () => {
@@ -30,9 +30,6 @@ const App = () => {
     console.log(newList)
   }
 
-  const editEmploye = (id) => {
-     
-  }
 
   const clearText = () => {
     setFname('')
